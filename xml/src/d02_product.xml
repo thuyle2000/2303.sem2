@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<product-list
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='d02_product.xsd'>
+    <product id="P01" status="true">
+        <name>coca cola</name>
+        <price>8.99</price>
+        <qoh>12</qoh>
+        <cat>Food</cat>
+    </product>
+    
+    <product id="P02" status="false">
+        <name>cha ca muc</name>
+        <price>10</price>
+        <qoh>5</qoh>
+        <cat>Food</cat>
+    </product>
+
+</product-list>
+

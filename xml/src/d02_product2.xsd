@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+ho so chua danh sach san pham
+moi sp, 
+        co thuoc tinh : maso id (Pxx), trangthai 
+        co noi dung: tensp , don-gia <1000, soluongtk , loaisp (Food|Beverage)
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="product-list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" minOccurs="1" maxOccurs="unbounded" 
+                            type="pro_type" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:complexType name="pro_type">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="price" type="price_type" />
+            <xs:element name="qoh" type="xs:positiveInteger" />
+            <xs:element name="cat" type="cat_type" />
+        </xs:sequence>
+        
+        <xs:attribute name="id" type="id_type" />
+        <xs:attribute name="status" type="xs:boolean" />
+    </xs:complexType>
+    
+    <xs:simpleType name="price_type">
+        <xs:restriction base="xs:decimal">
+            <xs:maxInclusive value="1000" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="cat_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Food" />
+            <xs:enumeration value="Beverage" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="id_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="P\d{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+</xs:schema>

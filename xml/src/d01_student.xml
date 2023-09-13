@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Ho so sinh vien, thuoc 2 to chuc HCM,HN, DN
+Moi sinh vien bao gom:
+  thuoc tinh: id, active
+  thong tin du lieu: hoten, gioi-tinh, ngay-sinh, email
+-->
+
+<DanhSach xmlns="http://fpt-aptech@edu.hcm" 
+          xmlns:hn="http://fpt-aptech@edu.hn" 
+          xmlns:dn="http://fpt-aptech@edu.dn">
+    <!-- danh sach vien tai trung tam HCMC -->
+    <SinhVien id="s1" active="true">
+        <Hoten>Nguyen Hung</Hoten>
+        <GioiTinh>nam</GioiTinh>
+        <NgaySinh>1/9/2000</NgaySinh>
+        <Email>hung@gmail.com</Email>
+    </SinhVien>
+    
+    <SinhVien id="s2" active="true">
+        <Hoten>My Nhung</Hoten>
+        <GioiTinh>nu</GioiTinh>
+        <NgaySinh>1/1/2003</NgaySinh>
+        <Email>nhung@gmail.com</Email>
+    </SinhVien>  
+     
+    <SinhVien id="s3" active="true">
+        <Hoten>Ha Doanh</Hoten>
+        <GioiTinh>nam</GioiTinh>
+        <NgaySinh>2/3/2000</NgaySinh>
+        <Email>doanh@gmail.com</Email>
+    </SinhVien>
+    
+    <!-- danh sach vien tai trung tam HN -->
+    <hn:SinhVien hn:id="s10" hn:active="false">
+        <hn:Hoten>Nguyen Luong</hn:Hoten>
+        <hn:GioiTinh>nam</hn:GioiTinh>
+        <hn:NgaySinh>2/7/1999</hn:NgaySinh>
+        <hn:Email>luong@fpt.edu.vn</hn:Email>
+    </hn:SinhVien>  
+    
+    <hn:SinhVien hn:id="s11" hn:active="true">
+        <hn:fullname>Anh Tuan</hn:fullname>
+        <hn:GioiTinh>nam</hn:GioiTinh>
+        <hn:NgaySinh>30/4/2000</hn:NgaySinh>
+        <hn:Phone>911</hn:Phone>
+        <hn:Email>tuan@fpt.edu.vn</hn:Email>
+    </hn:SinhVien> 
+    
+     <hn:SinhVien hn:id="s12" hn:active="true">
+        <hn:Hoten>Nhat Truong</hn:Hoten>
+        <hn:GioiTinh>nam</hn:GioiTinh>
+        <hn:NgaySinh>30/4/2001</hn:NgaySinh>
+        <hn:Email>truong@fpt.edu.vn</hn:Email>
+        <hn:Address>590 CMT8</hn:Address>
+    </hn:SinhVien>          
+</DanhSach>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE StudentList SYSTEM 'd02_student.dtd'
+[
+    <!ENTITY sg "Saigon">
+    <!ENTITY bd "Binh Duong">
+    <!ENTITY bt "Binh Thuan">
+]
+ >
+<StudentList>
+    <Student id="s1" active="true">
+        <name>Nguyen Nhat Truong</name>
+        <gender>nam</gender>
+        <dob>2000-09-30</dob>
+        <email>truong@fpt.edu.vn</email>
+        <address>&bd;</address>
+    </Student>
+ 
+    <Student id="s2" active="false">
+        <name>Nguyen minh Thien</name>
+        <gender>nam</gender>
+        <dob>2004-09-30</dob>
+        <email>thien@fpt.edu.vn</email>
+        <address>&sg;</address>
+    </Student>
+    
+    <Student id="s3" active="true">
+        <name>Ngoc Nhung</name>
+        <gender>nu</gender>
+        <dob>2004-09-30</dob>
+        <email>nhung@fpt.edu.vn</email>
+        <address>&sg;</address>
+    </Student>
+    
+    <Student id="s4" active="true">
+        <name>Lee Min Hoo</name>
+        <gender>nam</gender>
+        <dob>2002-09-30</dob>
+        <email>minh@fpt.edu.vn</email>
+        <address>&bt;</address>
+    </Student>
+</StudentList>
+

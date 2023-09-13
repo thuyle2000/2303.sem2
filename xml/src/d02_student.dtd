@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+day la tap tin mo ta cau truc ho so sinh vien.
+Moi sinh vien co:
+  thuoc tinh: id, active
+  thong tin du lieu: hoten, gioi-tinh, ngay-sinh, email, diachi
+-->
+
+<!ELEMENT StudentList (Student+)>
+<!ELEMENT Student (name, gender, dob, email, address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ATTLIST Student id ID #REQUIRED active (true|false) #REQUIRED >
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="d03_product.css" ?>
+<product-list>
+    <store id="S01">
+        <store-name>Store ONE</store-name>
+        <store-adress>590 CMT8, D3. HCMC</store-adress>
+        
+        <product id="P01" status="true">
+            <name>coca cola</name>
+            <price>12</price>
+            <qoh>4</qoh>
+            <cat>beverage</cat>
+        </product>
+        <product id="P02" status="false">
+            <name>cha ca muc</name>
+            <price>10</price>
+            <qoh>3</qoh>
+            <cat>Food</cat>
+        </product>
+        <product id="P10" status="true">
+            <name>cake</name>
+            <price>40</price>
+            <qoh>4</qoh>
+            <cat>Food</cat>
+        </product>
+    </store>
+
+
+    <store id="S02">
+        <store-name>Store TWO</store-name>
+        <store-adress>390 NKKN, D3. HCMC</store-adress>
+        
+        <product id="P01" status="true">
+            <name>coca cola</name>
+            <price>13</price>
+            <qoh>20</qoh>
+            <cat>beverage</cat>
+        </product>
+        <product id="P02" status="false">
+            <name>cha ca muc</name>
+            <price>50</price>
+            <qoh>2</qoh>
+            <cat>Food</cat>
+        </product>
+        <product id="P10" status="true">
+            <name>cake</name>
+            <price>42</price>
+            <qoh>2</qoh>
+            <cat>Food</cat>
+        </product>
+        <product id="P20" status="true">
+            <name>bananas</name>
+            <price>5</price>
+            <qoh>20</qoh>
+            <cat>Food</cat>
+        </product>
+        <product id="P21" status="true">
+            <name>Beer 333</name>
+            <price>22</price>
+            <qoh>30</qoh>
+            <cat>beverage</cat>
+        </product>
+        <product id="P22" status="false">
+            <name>7up</name>
+            <price>8</price>
+            <qoh>0</qoh>
+            <cat>beverage</cat>
+        </product>
+        
+        <product id="P23" status="true">
+            <name>ca Linh</name>
+            <price>100</price>
+            <qoh>0</qoh>
+            <cat>Food</cat>
+        </product>
+        
+    </store>
+
+</product-list>
+

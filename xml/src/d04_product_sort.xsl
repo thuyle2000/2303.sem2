@@ -6,6 +6,7 @@
     Author     : THUYLM
     Description:
         Purpose of transformation document d03_product.xml => product.html
+        sap xep danh san pham theo thu tu don gia giam dan
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -14,7 +15,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>san-pham</title>
+                <title>san-pham-sort</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"  rel="stylesheet" />                     
             </head>
             <body>
@@ -48,13 +49,14 @@
                         <th>id</th>
                         <th>name</th>
                         <th>price</th>
-                        <th>quality on hand</th>
+                        <th>q.o.h</th>
                         <th>category</th>
                         <th>status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <xsl:for-each select="product">
+                        <xsl:sort select="price" data-type="number" order="descending"/>
                         <tr>
                             <td> 
                                 <!-- <xsl:value-of select="position()" />-->
@@ -65,19 +67,19 @@
                             </td>
                             <td> 
                                 <xsl:value-of select="name" />
-                            </td>
-                            <td>  
+                            </td>                                                 
+                            <td style="color:red; text-align:right;padding-right:40px;">  
                                 <xsl:value-of select="price" /> 
                             </td>
-                            <td>  
+                            <td style="text-align:right;padding-right:40px;">  
                                 <xsl:value-of select="qoh" /> 
                             </td>
                             <td>   
                                 <xsl:value-of select="cat" />
                             </td>
-                            <td>   
+                            <td>
                                 <xsl:value-of select="@status" />
-                            </td>
+                            </td>  
                         </tr>
                     </xsl:for-each>
                 </tbody>

@@ -6,6 +6,7 @@
     Author     : THUYLM
     Description:
         Purpose of transformation document d03_product.xml => product.html
+        cac san pham co status = false => in mau do
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -75,9 +76,17 @@
                             <td>   
                                 <xsl:value-of select="cat" />
                             </td>
-                            <td>   
-                                <xsl:value-of select="@status" />
-                            </td>
+                            
+                            <xsl:if test="@status = 'false'">
+                                <td style="color:orange; font-weight:bold;">   
+                                    <xsl:value-of select="@status" />
+                                </td>                                
+                            </xsl:if>
+                            <xsl:if test="@status = 'true'">
+                                <td>   
+                                    <xsl:value-of select="@status" />
+                                </td>
+                            </xsl:if>
                         </tr>
                     </xsl:for-each>
                 </tbody>

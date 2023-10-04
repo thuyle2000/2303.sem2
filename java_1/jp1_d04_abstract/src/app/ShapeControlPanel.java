@@ -62,6 +62,20 @@ public class ShapeControlPanel {
                 case "3":
                     display();
                     break;
+
+                case "4":
+                    display("circle");
+                    break;
+
+                case "5":
+                    display("square");
+                    break;
+                case "6":
+                    System.out.print(" - nhap dien tich: ");
+                    float dt = Float.parseFloat(sc.nextLine().trim());
+                    display(dt);
+                    break;
+
                 case "7":
                     return;
                 default:
@@ -71,20 +85,70 @@ public class ShapeControlPanel {
     }
 
     private void create(Shape c) {
-        ds[index]= c;
+        ds[index] = c;
         index++;
         System.out.println(">> Them hinh moi thanh cong !");
     }
 
     private void display() {
-        if(index == 0){
+        if (index == 0) {
+            System.err.println("LOI: He thong chua co du lieu !");
+            return;
+        }
+
+        System.out.println("\n Cac doi tuong hinh hoc");
+        for (int i = 0; i < index; i++) {
+            System.out.println(ds[i]);
+        }
+    }
+
+    private void display(String shape) {
+        if (index == 0) {
+            System.err.println("LOI: He thong chua co du lieu !");
+            return;
+        }
+        int cnt = 0;
+        boolean circle = shape.equalsIgnoreCase("circle");
+
+        if (circle) {
+            for (int i = 0; i < index; i++) {
+                if (ds[i] instanceof Circle) {
+                    System.out.println(ds[i]);
+                    cnt++;
+                }
+            }// ket thuc for
+        } else {
+            for (int i = 0; i < index; i++) {
+                if (ds[i] instanceof Rectangle) {
+                    Rectangle item = (Rectangle) ds[i];
+                    if (item.length == item.width) {
+                        System.out.println(item);
+                        cnt++;
+                    }
+                }
+            }
+        }
+
+        if (cnt == 0) {
+            System.err.printf(" >> Ko tim thay hinh %s !\n", circle ? "tron" : "vuong");
+        }
+    }
+
+    private void display(float dt) {
+        if (index == 0) {
             System.err.println("LOI: He thong chua co du lieu !");
             return;
         }
         
-        System.out.println("\n Cac doi tuong hinh hoc");
+        int cnt=0;
         for (int i = 0; i < index; i++) {
-            System.out.println(ds[i]);
+            if(ds[i].area()>=dt){
+                System.out.println(ds[i]);
+                cnt++;
+            }
+        }//ket thuc fOR
+        if(cnt==0){
+            System.err.printf(">> Loi: Ko tim thay hinh co dien tich >=%.2f", dt);
         }
     }
 

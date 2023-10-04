@@ -40,4 +40,11 @@ public class Rectangle extends Shape {
             break;
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("dt:%8.2f, cv:%8.2f, dai:%7.2f, rong:%7.2f ", area(), perimeter(), length, width) ;
+    }
+    
+    
 }

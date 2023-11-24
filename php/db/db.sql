@@ -20,3 +20,17 @@ INSERT INTO `tbbatch` (`id`, `startDate`, `fee`, `courseID`) VALUES ('T1.2303.M0
 ('T1.2302.E1', '03-2023', '1300', '3'),
 ('T1.2309.M0', '09-2023', '1310', '3'), 
 ('T1.2009.M1', '09-2000', '910', '1')
+
+
+
+/*tao bang tbUser*/
+CREATE TABLE `db2303.m0`.`tbuser` 
+(`email` VARCHAR(30) NOT NULL, 
+`password` VARCHAR(30) NOT NULL , `role` INT NOT NULL , 
+`name` VARCHAR(30) NOT NULL , PRIMARY KEY (`email`)) ENGINE = InnoDB;
+
+INSERT INTO `tbuser` (`email`, `password`, `role`, `name`) VALUES 
+('guest@gmail.com', '123', '1', 'mr / ms Guest'), 
+('admin@gmail.com', 'admin', '2', 'mr Supervisor'),
+('student@gmail.com', 'abc', '1', 'Students'), 
+('noname@gmail.com', 'nothing', '1', 'mr. stranger');

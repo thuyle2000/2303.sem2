@@ -44,6 +44,31 @@ class CourseDAO{
     }
 
 
+    public static function getByID(int $id) {
+        $cn = getConnect_obj();
+
+        //goi lenh doc du lieu trong tbCourse -> db server
+        $sql = "SELECT * FROM `tbcourse` WHERE `id`=$id ";
+        $rs = $cn->query($sql);
+        if($rs==false){
+            die ("Error: ". $cn->error);
+        }
+
+        $a = null;
+        //doc het du lieu: luu vo mang '$a'
+        if($rs->num_rows){
+            $a  = $rs->fetch_assoc();
+        }
+        
+        //dong ket noi
+        $cn->close();
+
+        //tra ket qua cho chuong trinh goi ham
+        return $a;
+    }
+
+
+
     public static function create(Course $obj){
         $cn = getConnect_obj();
 
@@ -66,6 +91,24 @@ class CourseDAO{
 
         return $r;
     }
+
+
+    public static function update(Course $obj){
+        $cn = getConnect_obj();
+
+        $sql = "INSERT INTO `tbcourse` (`id`, `name`, `year`, `fee`) VALUES (NULL, '$obj->name', $obj->year, $obj->fee);";
+
+        $r = $cn->execute_query($sql);
+
+        $cn->close();
+
+        return $r;
+    }
 }
 
 
+
+//test
+
+// $a = CourseDAO::getByID(23);
+// var_dump($a);
